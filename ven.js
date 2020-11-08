@@ -3,7 +3,7 @@ var moneyInserted = 0;
 
 var msg = "";
 
-var sodas = ["Coke", "Maxie", "Fresca", "TaB"];
+var sodas = ["Coke", "Sprite", "Lemon", "TaB"];
 const price = 1.3;
 
 var messageEl = document.getElementById("message")

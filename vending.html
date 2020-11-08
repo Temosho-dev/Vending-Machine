@@ -1,0 +1,42 @@
+<!-- Vending Machine website-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Vending Machine</title>
+</head>
+<body style="background-color:blanchedalmond;">
+    <h1 style="color: chocolate;">Vending Machine</h1>
+     <!-- Prices for drinks -->
+    <form style="margin-bottom: 10px;">
+        <span>R0.50</span>
+        <input type="text" name="ones" id="ones" placeholder="0" value="0" oninput="tally()">
+        <br/>
+        <span>R1.00</span>
+        <input type="text" name="fives" id="fives" placeholder="0" value="0" oninput="tally()">
+        <br/>
+        <span>R2.00</span>
+        <input type="text" name="nickels" id="nickels" placeholder="0" value="0" oninput="tally()" >
+        <br/>
+        <span>R5.00</span>
+        <input type="text" name="dimes" id="dimes" placeholder="0" value="0" oninput="tally()">
+        <br/>
+        
+    </form>
+     <!-- Buttons to select the drink -->
+    <button value="Coke" id="coke" onclick="dispenseSoda(0)" style="background-color: salmon;">Coke</button>
+    <button value="Maxie" id="Maxie" onclick="dispenseSoda(1)" style="background-color: azure;" >Maxie</button>
+    <button value="Fresca" id="Fresca" onclick="dispenseSoda(2)" style="background-color: palegreen;">Fresca</button>
+    <button value="TaB" id="tab" style="margin-bottom: 10px; background-color: tan;" onclick="dispenseSoda(3)" >TaB</button>
+    <br/>
+    <button value="Cancel" id="cancel" onclick="cancel()" style="background-color: cornflowerblue;">Cancel</button>
+
+    <!-- Display windows -->
+    <h2>Total Entered: R<span id="paid">0.00</span></h2>
+
+    <h2 id="message">Insert money first. Select a Drink.</h2>
+    
+<script src="ven.js"></script>
+</body>
+</html>

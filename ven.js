@@ -3,10 +3,10 @@ var moneyInserted = 0;
 
 var msg = "";
 
-var sodas = ["Coke", "Sprite", "Lemon", "TaB"];
+var sodas = ["Coke", "Sprite", "Lemon", "Stoney"];
 const price = 1.3;
 
-var messageEl = document.getElementById("message")
+var messageEl = document.getElementById("message") 
 
 var totalPaid = 0;
 
@@ -18,10 +18,10 @@ const currency_dime = 5;
 
 //Adding the total amount
 function getTotal(){
-    var currency_ones = Number(document.getElementById("ones").value);
-    var currency_fives = Number(document.getElementById("fives").value);
-    var currency_nickels = Number(document.getElementById("nickels").value);
-    var currency_dimes = Number(document.getElementById("dimes").value);
+    var currency_ones = Number(document.getElementById("R0.50").value);
+    var currency_fives = Number(document.getElementById("R1.00").value);
+    var currency_nickels = Number(document.getElementById("R2.00").value);
+    var currency_dimes = Number(document.getElementById("R5.00").value);
     
 
     if (currency_ones > 0) {
@@ -59,10 +59,10 @@ function clearTally(){
 }
 
 function clearForm(){
-    document.getElementById("ones").value = 0;
-    document.getElementById("fives").value = 0;
-    document.getElementById("nickels").value = 0;
-    document.getElementById("dimes").value = 0;
+    document.getElementById("R0.50").value = 0;
+    document.getElementById("R1.00").value = 0;
+    document.getElementById("R2.00").value = 0;
+    document.getElementById("R5.00").value = 0;
     
 }
 //Clear the entire App
@@ -77,7 +77,7 @@ function cancel(){
 
         messageEl.innerHTML = msg;
     }else if(totalPaid == 0){
-        msg = "Insert money first. Select a Drink."
+        msg = "Insert Money First >> Select a Drink."
 
         messageEl.innerHTML = msg;
     }  

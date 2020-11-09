@@ -1,0 +1,42 @@
+<!-- Vending Machine website-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Vending Machine</title>
+</head>
+<body style="background-color:blanchedalmond;">
+    <h1 style="color: chocolate;">Vending Machine</h1>
+     <!-- Prices for drinks -->
+    <form style="margin-bottom: 10px;">
+        <span>R0.50</span>
+        <input type="text" name="R0.50" id="R0.50" placeholder="0" value="0" oninput="tally()" style="margin-bottom: 10px;" >
+        <br/>
+        <span>R1.00</span>
+        <input type="text" name="R1.00" id="R1.00" placeholder="0" value="0" oninput="tally()"  style="margin-bottom: 10px;">
+        <br/>
+        <span>R2.00</span>
+        <input type="text" name="R2.00" id="R2.00" placeholder="0" value="0" oninput="tally()"  style="margin-bottom: 10px;" >
+        <br/>
+        <span>R5.00</span>
+        <input type="text" name="R5.00" id="R5.00" placeholder="0" value="0" oninput="tally()">
+        <br/>
+        
+    </form>  
+     <!-- Buttons to select the drink -->
+    <button value="Coke" id="coke" onclick="dispenseSoda(0)" style="background-color: salmon;">Coke</button>
+    <button value="Sprite" id="Sprite" onclick="dispenseSoda(1)" style="background-color: azure;" >Sprite</button>
+    <button value="Lemon" id="Lemon" onclick="dispenseSoda(2)" style="background-color: palegreen;">Lemon</button>
+    <button value="Stoney" id="Stoney" style="margin-bottom: 10px; background-color: tan;" onclick="dispenseSoda(3)" >Stoney</button>
+    <br/>
+    <button value="Reset" id="Reset" onclick="cancel()" style="background-color: cornflowerblue;">Reset</button>
+
+    <!-- Display windows -->
+    <h2>Total Money Entered: R<span id="paid">0.00</span></h2>
+
+    <h2 id="message">Insert Money First >> Select a Drink.</h2>
+    
+<script src="ven.js"></script>
+</body>
+</html>
